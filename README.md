@@ -1,3 +1,1 @@
-Web App
-
-This is a simple web app built with Node.js, Express, and SQLite3 for managing notes. It allows users to view, add, edit, and delete notes stored in an SQLite database.
+This is a simple Notes Web Application built with Node.js, Express, SQLite3, and EJS, allowing users to create, view, edit, and delete notes locally through a user-friendly interface. To run it locally, clone the repository, install dependencies with npm install, and start the server using npm start.
