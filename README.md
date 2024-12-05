@@ -20,15 +20,19 @@ To run this app locally:
 To open the website app:
 
 Navigate into the project directory:
-cd web-app
+
+cd my-web-app
 
 Install the dependencies:
+
 npm install
 
 Set up the database (if applicable):
+
 npx knex migrate:latest
 
 Run the application:
+
 npm start
 
 Now the app should be running locally at http://localhost:3000.
