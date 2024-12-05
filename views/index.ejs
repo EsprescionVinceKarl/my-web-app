@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Notes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>My Notes</h1>
+
+    
+    <form action="/add" method="POST">
+        <input type="text" name="name" placeholder="Note Title" required>
+        <textarea name="description" placeholder="Note Content"></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+
+    
+    <h2>All Notes:</h2>
+    <ul>
+        <% notes.forEach((note) => { %>
+            <li>
+                <h3><%= note.name %></h3>
+                <p><%= note.description %></p>
+
+                
+                <form action="/edit" method="POST">
+                    <input type="hidden" name="id" value="<%= note.id %>">
+                    <input type="text" name="name" value="<%= note.name %>" required>
+                    <textarea name="description"><%= note.description %></textarea>
+                    <button type="submit">Edit Note</button>
+                </form>
+
+                
+                <form action="/delete" method="POST">
+                    <input type="hidden" name="id" value="<%= note.id %>">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
