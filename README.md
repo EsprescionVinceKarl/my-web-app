@@ -13,4 +13,4 @@ To run this app locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/web-app.git
+   git clone https://github.com/EsprescionVinceKarl/my-web-app.git
